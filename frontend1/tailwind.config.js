@@ -23,7 +23,7 @@ module.exports = {
         },
       },
       animation: {
-        // typing: "typing 8s steps(50) infinite alternate, blink .9s infinite",
+        typing: "typing 8s steps(50) infinite alternate, blink .9s infinite",
       },
     },
   },
