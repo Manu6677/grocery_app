@@ -59,7 +59,7 @@ const Header = () => {
           </div>
 
           <div
-            className="text-xl text-slate-600 w-11 h-11 text-white flex items-center"
+            className="text-xl text-slate-600 w-11 h-11 flex items-center"
             onClick={handleShowMenu}
           >
             {userData.image ? (
@@ -69,7 +69,7 @@ const Header = () => {
                 className="h-full w-full rounded-full drop-shadow-md object-cover"
               />
             ) : (
-              <FaUserAlt />
+              <FaUserAlt className="text-white cursor-pointer" />
             )}
             {showMenu && (
               <div className="absolute bg-white cursor-pointer shadow drop-shadow-md py-2 px-2 right-2 mt-20 rounded-lg flex flex-col">
