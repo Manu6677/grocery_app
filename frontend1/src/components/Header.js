@@ -27,7 +27,7 @@ const Header = () => {
 
   // console.log("value of showusermenu", showMenu);
   return (
-    <header className="fixed w-full h-20 shadow-lg p-2 z-50 bg-white md:px-1 md:py-2">
+    <header className="fixed w-full h-20 shadow-lg p-2 z-50 bg-gray-900 md:px-1 md:py-2">
       {/*desktop*/}
 
       <div className="flex items-center h-full justify-between">
@@ -42,14 +42,14 @@ const Header = () => {
         </Link>
 
         <div className="flex gap-4 items-center pr-3 md:gap-7">
-          <nav className="md:flex gap-4 md:gap-6 text-base md:text-lg hidden">
+          <nav className="md:flex gap-4 text-white md:gap-6 text-base md:text-lg hidden">
             <Link to="/">Home</Link>
             <Link to="/menu/64bcef5f14dae50b7ac84dd3">Menu</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
           </nav>
 
-          <div className="text-2xl text-slate-600 relative">
+          <div className="text-2xl text-white text-slate-600 relative">
             <Link to={"/cart"}>
               <IoMdCart />
             </Link>
@@ -59,7 +59,7 @@ const Header = () => {
           </div>
 
           <div
-            className="text-xl text-slate-600 w-11 h-11 flex items-center"
+            className="text-xl text-slate-600 w-11 h-11 text-white flex items-center"
             onClick={handleShowMenu}
           >
             {userData.image ? (
@@ -98,7 +98,7 @@ const Header = () => {
                   </Link>
                 )}
                 <div>
-                  <nav className="flex flex-col text-base md:text-lg  whitespace-nowrap md:hidden cursor-pointer px-2">
+                  <nav className="flex flex-col text-white text-base md:text-lg  whitespace-nowrap md:hidden cursor-pointer px-2">
                     <Link to="/">Home</Link>
                     <Link to="/menu/64bcef5f14dae50b7ac84dd3">Menu</Link>
                     <Link to="/about">About</Link>

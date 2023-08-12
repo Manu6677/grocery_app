@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 import { loginRedux } from "../redux/userSlice";
-
+import { Particlesbg } from "../components/Particlesbg";
 const Loginuser = () => {
   const naviagte = useNavigate();
   const userData = useSelector((state) => state.user);
@@ -72,9 +72,11 @@ const Loginuser = () => {
   // console.log(userData);
 
   return (
-    <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full backdrop-blur-3xl">
+    <div className="bg-gradient-to-r from-gray-900 to-black h-full backdrop-blur-3xl">
+      <Particlesbg />
+
       <div className="py-1 md:py-2 w-full m-auto max-w-sm flex flex-col h-full overflow-hidden items-center justify-center">
-        <div className="">
+        <div className="z-50">
           <div className="flex items-center justify-center">
             <img
               src={iconimg}
@@ -83,17 +85,21 @@ const Loginuser = () => {
             />
           </div>
           <form className="w-full py-3" onSubmit={handleSubmit}>
-            <label htmlFor="email">Email: </label>
+            <label htmlFor="email" className="text-white">
+              Email:
+            </label>
             <input
               type={"email"}
               id="email"
               name="email"
               value={data.email}
               onChange={handleOnChange}
-              className="w-full bg-slate-200 mt-1 mb-2 px-2 py-2 rounded focus-within:outline-blue-300"
+              className="w-full bg-slate-200 mt-1 mb-2 px-2 py-2 rounded focus-within:outline-violet-900"
             />
 
-            <label htmlFor="password">Password: </label>
+            <label htmlFor="password" className="text-white">
+              Password:
+            </label>
             <div className="flex bg-slate-200 rounded -py-1 items-center mb-2">
               <input
                 type={showPassword ? "text" : "password"}
@@ -101,7 +107,7 @@ const Loginuser = () => {
                 name="password"
                 value={data.password}
                 onChange={handleOnChange}
-                className="w-full bg-slate-200 mt-1 mb-2 px-2 py-1 rounded focus-within:outline-blue-300"
+                className="w-full bg-slate-200 mt-1 mb-2 ml-2 px-2 py-1 rounded focus-within:outline-blue-300"
               />
 
               {showPassword ? (

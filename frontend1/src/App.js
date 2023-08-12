@@ -24,7 +24,18 @@ function App() {
   // console.log("store from app", store);
   return (
     <>
-      <ToastContainer />
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div>
         <Header />
         <main className="pt-20 bg-slate-100 h-screen">
